@@ -42,11 +42,5 @@
     &_btn {
         margin: 2em 1em 0 1em;
     }
-    @include screen('min-width: 1400px'){
-     
-        &_decoration {
-            right: 13%;
-            width: 50%;
-        }
-    }
+   
 }

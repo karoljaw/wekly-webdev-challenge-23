@@ -19,3 +19,16 @@
         font-weight: 400;
     }
 }
+
+.secondaryHeading {
+    &_heading {
+        font-size: 2em;
+        margin:0;
+    }
+    &_subHeading {
+        font-size: 2em;
+        font-weight: 900;
+        font-family: $fontHeadings;
+        margin: 0;
+    }
+}

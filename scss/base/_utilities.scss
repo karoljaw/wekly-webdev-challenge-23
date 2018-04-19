@@ -19,3 +19,9 @@
 .flex {
     flex: 1;
 }
+
+.display-flex {
+    display: flex;
+    align-self: stretch;
+    justify-content: space-between;
+}

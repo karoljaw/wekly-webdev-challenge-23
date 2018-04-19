@@ -39,6 +39,16 @@ body {
   font-family: "Leckerli One", cursive;
   font-weight: 400; }
 
+.secondaryHeading_heading {
+  font-size: 2em;
+  margin: 0; }
+
+.secondaryHeading_subHeading {
+  font-size: 2em;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  margin: 0; }
+
 .padding {
   padding-left: 5%;
   padding-right: 5%;
@@ -57,6 +67,11 @@ body {
 
 .flex {
   flex: 1; }
+
+.display-flex {
+  display: flex;
+  align-self: stretch;
+  justify-content: space-between; }
 
 .navbar {
   display: flex;
@@ -171,10 +186,6 @@ body {
     margin: 2.5em 0; }
   .header_btn {
     margin: 2em 1em 0 1em; }
-  @media only screen and (min-width: 1400px) {
-    .header_decoration {
-      right: 13%;
-      width: 50%; } }
 
 .menu {
   display: flex;
@@ -356,3 +367,50 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/mountains-min.png");
   background-size: cover;
   background-attachment: fixed; }
+
+.blogItem {
+  background-color: orangered;
+  margin: .5rem;
+  padding: .5rem;
+  color: white; }
+  .blogItem_heading {
+    margin: 0;
+    font-weight: 900; }
+  .blogItem_time {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em; }
+  .blogItem--1 {
+    background-color: transparent;
+    color: #090909; }
+  .blogItem--2 {
+    background-color: #0a86ff; }
+    .blogItem--2:hover {
+      background-color: #2493ff; }
+  .blogItem--3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/tarrace-min.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .blogItem--4 {
+    background-color: #eaeaea;
+    color: #090909; }
+    .blogItem--4:hover {
+      background-color: #dddddd; }
+  .blogItem--5 {
+    background-color: #090909; }
+    .blogItem--5:hover {
+      background-color: rgba(0, 0, 0, 0.85); }
+  .blogItem--6 {
+    background-color: #e91d62;
+    justify-content: center; }
+    .blogItem--6:hover {
+      background-color: #ce1453; }
+
+@media only screen and (min-width: 768px) {
+  .blog_row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; } }
