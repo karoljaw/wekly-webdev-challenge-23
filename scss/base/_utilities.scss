@@ -1,0 +1,21 @@
+._text {
+    &-caps {
+        text-transform: uppercase;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-blue {
+        color: $colorAzureRadiance;
+    }
+    &-fancy {
+        font-family: $fontFancy;
+        font-weight: 400;
+    }
+}

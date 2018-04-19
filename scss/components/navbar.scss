@@ -1,0 +1,79 @@
+.navbar {
+    @include flex(row,nowrap,space-between,center,center);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: auto;
+    transition: .3s;
+    padding-top: 0;
+    padding-bottom: 0;
+    &_logo {
+        margin: .5em 0;
+        font-size: 1.8em;
+        font-family: $fontHeadings;
+        font-weight: 900;
+        user-select: none;
+        overflow-wrap: none;
+        text-decoration: none;
+        color: inherit;
+    }
+    &_logo:hover,
+    &_logo:focus {
+        opacity: 0.9;
+    }
+    &_trigger {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 150;
+    }
+    &_menu {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: .3s;
+        height: 100vh;
+        width: 100%;
+        transform-origin: right center;
+        transform: scaleX(0);
+        z-index: 120;
+    }
+    &_menu.-active {
+        transition: .5s;
+        transform: scaleX(1);
+    }
+    &.-sticky {
+        background-color: rgba(black, 0.9);
+    }
+    &.-sticky .navbar{
+        &_logo {
+            margin: 0.5em 0;
+        }
+    }
+    @include screen(desktop) {
+        @include flex(row,nowrap,space-between,stretch,center);
+        &_logo {
+            margin: 1em 0;
+            transition: .3s;
+        }
+        &_trigger {
+            display: none;
+        }
+        &_menu {
+            position: static;
+            width: auto;
+            height: auto;
+            transition: 0;
+            transform: scaleX(1);
+        }
+        &_menu.-active {
+            transition: 0;
+            transform: scaleX(1);
+        }
+
+    }
+}
