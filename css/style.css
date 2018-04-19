@@ -6,29 +6,57 @@
   box-sizing: border-box; }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%; }
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 1.1rem; } }
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 1.2rem; } }
 
 body {
   box-sizing: border-box; }
 
-._text-caps {
+.text-caps {
   text-transform: uppercase; }
 
-._text-bold {
+.text-bold {
   font-weight: 700; }
 
-._text-right {
+.text-right {
   text-align: right; }
 
-._text-center {
+.text-center {
   text-align: center; }
 
-._text-blue {
+.text-blue {
   color: #0081FF; }
 
-._text-fancy {
+.text-fancy {
   font-family: "Leckerli One", cursive;
   font-weight: 400; }
+
+.padding {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 6em;
+  padding-bottom: 6em; }
+  @media only screen and (min-width: 768px) {
+    .padding {
+      padding-left: 10%;
+      padding-right: 10%; } }
+  @media only screen and (min-width: 1024px) {
+    .padding {
+      padding-left: 15%;
+      padding-right: 15%; } }
+  .padding:focus {
+    outline: none; }
+
+.flex {
+  flex: 1; }
 
 .navbar {
   display: flex;
@@ -108,7 +136,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   align-content: center;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/office-min.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/office-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -127,15 +155,6 @@ body {
     background-size: contain;
     background-position: right bottom;
     background-repeat: no-repeat; }
-  .header_box.-content {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-    width: 100%;
-    position: relative;
-    z-index: 5; }
   .header_heading {
     font-weight: 900;
     font-size: 2.5em;
@@ -152,20 +171,7 @@ body {
     margin: 2.5em 0; }
   .header_btn {
     margin: 2em 1em 0 1em; }
-  @media only screen and (min-width: 550px) {
-    .header_box.-content {
-      width: 75%; } }
-  @media only screen and (min-width: 768px) {
-    .header:before {
-      background-color: rgba(0, 0, 0, 0.7); }
-    .header_box.-content {
-      width: 60%; } }
-  @media only screen and (min-width: 1024px) {
-    .header_box.-content {
-      width: 65%; } }
   @media only screen and (min-width: 1400px) {
-    .header_box.-content {
-      width: 50%; }
     .header_decoration {
       right: 13%;
       width: 50%; } }
@@ -247,7 +253,7 @@ body {
       .menu_link.-active:before {
         transform: scale(1, 1); } }
 
-._btn {
+.btn {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -259,7 +265,7 @@ body {
   border: 1px solid inherit;
   cursor: pointer;
   padding: 0.7em 1.5em; }
-  ._btn-primary {
+  .btn-primary {
     font-weight: bold;
     margin: 0;
     border: 0;
@@ -270,5 +276,83 @@ body {
     color: white;
     background-color: #00aeed;
     transition: .3s; }
-  ._btn-primary:hover, ._btn-primary:focus {
+  .btn-primary:hover, .btn-primary:focus {
     background-color: #0081FF; }
+
+.aboutUs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  color: white;
+  background-color: #0081FF; }
+  .aboutUs_heading {
+    padding: 0;
+    margin: 0;
+    font-size: 2em; }
+  .aboutUs_subHeading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 1.7em;
+    margin-bottom: 0; }
+  .aboutUs_btn {
+    margin-top: 3em;
+    background-color: #3b4374; }
+  .aboutUs_btn:hover, .aboutUs_btn:focus {
+    background-color: #212641; }
+
+@media only screen and (min-width: 768px) {
+  .aboutUs {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center; } }
+
+.services {
+  background-color: #0079f0; }
+  .services_box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center; }
+
+@media only screen and (min-width: 768px) {
+  .services_box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center; } }
+
+.serviceItem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center; }
+  .serviceItem_image {
+    width: 4em;
+    height: auto;
+    margin-right: 35px; }
+  .serviceItem_image.-eye {
+    margin-top: 0.5em; }
+  .serviceItem_heading {
+    font-size: 1.2em;
+    margin-top: 0; }
+  .serviceItem_paragraph {
+    margin-top: 1.5em; }
+
+.client {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/mountains-min.png");
+  background-size: cover;
+  background-attachment: fixed; }

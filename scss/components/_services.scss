@@ -1,0 +1,31 @@
+.services {
+    background-color: darken($colorAzureRadiance, 3%);
+    &_box {
+        @include flex(column,nowrap,flex-start,flex-start,center);
+    }
+}
+
+@include screen(tablet) {
+    .services_box {
+        @include flex(row,nowrap,flex-start,center,center);
+    }
+}
+
+.serviceItem {
+    @include flex(row,nowrap,center,flex-start,center);
+    &_image {
+        width: 4em;
+        height: auto;
+        margin-right: 35px;
+    }
+    &_image.-eye {
+        margin-top: 0.5em;
+    }
+    &_heading {
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+    &_paragraph {
+        margin-top: 1.5em;
+    }
+}

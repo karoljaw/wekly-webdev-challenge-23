@@ -1,0 +1,9 @@
+.client {
+    @include flex(column,nowrap,center,center,center);
+    color: white;
+    background-color: black;
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),  url('../assets/mountains-min.png');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}

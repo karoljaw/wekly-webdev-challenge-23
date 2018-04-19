@@ -1,21 +1,21 @@
-._text {
-    &-caps {
-        text-transform: uppercase;
+.padding {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    @include screen(tablet) {
+        padding-left: 10%;
+        padding-right: 10%;
     }
-    &-bold {
-        font-weight: 700;
+    @include screen(desktop) {
+        padding-left: 15%;
+        padding-right: 15%;
     }
-    &-right {
-        text-align: right;
+    &:focus {
+        outline: none;
     }
-    &-center {
-        text-align: center;
-    }
-    &-blue {
-        color: $colorAzureRadiance;
-    }
-    &-fancy {
-        font-family: $fontFancy;
-        font-weight: 400;
-    }
+}
+
+.flex {
+    flex: 1;
 }

@@ -7,7 +7,20 @@
 }
 
 html {
+    box-sizing: border-box;
     font-size: 62.5%;
+}
+
+@include screen(tablet) {
+    html {
+        font-size: 1.1rem;
+    }
+}
+
+@include screen(desktop) {
+    html {
+        font-size: 1.2rem;
+    }
 }
 
 body {
