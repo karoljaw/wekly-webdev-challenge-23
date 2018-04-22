@@ -1,4 +1,5 @@
 .services {
+    color: white;
     background-color: darken($colorAzureRadiance, 3%);
     &_box {
         @include flex(column,nowrap,flex-start,flex-start,center);
@@ -18,14 +19,11 @@
         height: auto;
         margin-right: 35px;
     }
-    &_image.-eye {
-        margin-top: 0.5em;
-    }
     &_heading {
         font-size: 1.2em;
-        margin-top: 0;
     }
     &_paragraph {
         margin-top: 1.5em;
+        margin-bottom: 1em;
     }
 }

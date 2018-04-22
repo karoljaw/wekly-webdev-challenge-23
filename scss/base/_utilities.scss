@@ -16,12 +16,30 @@
     }
 }
 
-.flex {
-    flex: 1;
+.side-padding {
+    padding-left: 5%;
+    padding-right: 5%;
+    @include screen(tablet) {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    @include screen(desktop) {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    &:focus {
+        outline: none;
+    }
 }
 
-.display-flex {
-    display: flex;
-    align-self: stretch;
-    justify-content: space-between;
+.mb {
+    margin-bottom: 4rem;
+}
+
+.mb--small {
+    margin-bottom: 3rem;
+}
+
+.mt {
+    margin-top: 4rem;
 }

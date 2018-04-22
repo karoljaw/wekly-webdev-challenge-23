@@ -1,14 +1,13 @@
 .blog {
-    &_box {
+    display: grid;
+    grid-template-rows: repeat(3, 16vw);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
 
-    }
+    color: white;
 }
 
 .blogItem {
-    background-color: orangered;
-    margin: .5rem;
-    padding: .5rem;
-    color: white;
     &_heading {
         margin: 0;
         font-weight: 900;
@@ -17,24 +16,35 @@
         margin: 0;
         font-weight: bold;
         font-size: 1em;
+        flex: 1;
     }
     &--1 {
+        grid-column: 1 / 3;
+
         background-color: transparent;
         color: $almostBlack;
     }
     &--2 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+
         background-color: lighten($colorAzureRadiance, 2%);
         &:hover {
             background-color: lighten($colorAzureRadiance, 7%);
         }
     }
     &--3 {
+        grid-row: 1 / 3;
+        grid-column: 3 / -1;
+
         background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/tarrace-min.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        &:hover {
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../assets/tarrace-min.png');
+        }
     }
-    
     &--4 {
         background-color: #eaeaea;
         color: $almostBlack;
@@ -49,6 +59,8 @@
         }
     }
     &--6 {
+        grid-column: 3 / -1;
+        
         background-color: #e91d62;
         justify-content: center;
         &:hover {
@@ -57,9 +69,5 @@
     }
 }
 
-@include screen(tablet) {
-    .blog_row {
-    @include flex(row,nowrap,center,center,center);
-    }
-}
+
 

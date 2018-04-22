@@ -21,6 +21,9 @@
         background-position: right bottom;
         background-repeat: no-repeat;
     }
+    &_box {
+        max-width: 450px;
+    }
     &_heading {
         font-weight: 900;
         font-size: 2.5em;
@@ -37,10 +40,8 @@
         margin: .2em 0;
     }
     &_paragraph {
+        position: relative;
         margin: 2.5em 0;
-    }
-    &_btn {
-        margin: 2em 1em 0 1em;
-    }
-   
+        z-index: 10;
+    }  
 }

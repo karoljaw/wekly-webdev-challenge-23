@@ -2,11 +2,13 @@
     @include flex(column,nowrap,flex-start,flex-start,center);
     color: white;
     background-color: $colorAzureRadiance;
-
     &_heading {
         padding: 0;
         margin: 0;
         font-size: 2em;
+    }
+    &_box {
+        width: 60%;
     }
     &_subHeading {
         font-family: $fontHeadings;
@@ -16,6 +18,7 @@
     }
     &_btn {
         margin-top: 3em;
+        margin-bottom: 3em;
         background-color: $colorEastBay;
     }
     &_btn:hover,
@@ -26,6 +29,12 @@
 
 @include screen(tablet) {
     .aboutUs {
-        @include flex(row,nowrap,flex-start,center,center);
+        @include flex(row,nowrap,center,center);
+        &_box {
+            padding: 1em;
+        }
+        &_btn {
+            margin-bottom: 3em;
+        }
     }
 }

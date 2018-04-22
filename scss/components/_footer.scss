@@ -1,0 +1,26 @@
+.footer {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/phone-screen-min.png');
+    // height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding-bottom: 4em;
+    &_box {
+        @include flex(column,wrap,center,center,center);
+        @include screen(tablet) {
+            @include flex(row,wrap, space-between)
+        }
+    }
+    &_contact {
+        margin-bottom: 4rem;
+    }
+    &_copyright {
+        text-align: center;
+    }
+    &_link {
+        text-decoration: none;
+        color: inherit;
+    }
+}
