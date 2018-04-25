@@ -3,24 +3,11 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
     font-size: 62.5%;
-}
-
-@include screen(tablet) {
-    html {
-        font-size: 1.1rem;
-    }
-}
-
-@include screen(desktop) {
-    html {
-        font-size: 1.2rem;
-    }
 }
 
 body {

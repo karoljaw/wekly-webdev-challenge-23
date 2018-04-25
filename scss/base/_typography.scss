@@ -17,21 +17,40 @@
     &-fancy {
         font-family: $fontFancy;
         font-weight: 400;
+        font-size: 3rem;
     }
 }
 
 .secondaryHeading {
     &_heading {
-        font-size: 2em;
+        font-size: 1.6em;
         margin:0;
     }
     &_subHeading {
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: 900;
         font-family: $fontHeadings;
         margin: 0;
     }
 }
 .paragraph {
-    margin-top: 1rem;
+    margin-top: .3rem;
+}
+@include screen(tablet) {
+    .paragraph {
+        margin-top: 1rem;
+    }
+}
+
+@include screen(table) {
+    .secondaryHeading {
+        &_heading {
+            font-size: 2em;
+        }
+        &_subHeading {
+            font-size: 1.5em;
+            font-weight: 900;
+            font-family: $fontHeadings;
+        }
+    }
 }

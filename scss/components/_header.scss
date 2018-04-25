@@ -5,34 +5,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 100vh;
+
+    position: relative;
+    min-height: 95vh;
     color: white;
-    padding-top: 7em;
-    padding-bottom: 7em;
-    &_decoration {
-        position: absolute;
-        z-index: 4;
-        bottom: -5%;
-        right: 3%;
-        width: 45%;
-        height: 85%;
-        background-image: url('../assets/man-min.png');
-        background-size: contain;
-        background-position: right bottom;
-        background-repeat: no-repeat;
-    }
+    font-size: 2rem;
+   
     &_box {
-        max-width: 450px;
+       margin-top: 20rem;
+        max-width: 500px;
+        z-index: 5;
     }
     &_heading {
         font-weight: 900;
         font-size: 2.5em;
-        margin: 0;
-    }
-    &_text {
         display: block;
-        font-size: .8em;
-        margin-bottom: .8em;
+    }
+    &_hello {
+      display: none;
     }
     &_subHeading {
         font-family: $fontHeadings;
@@ -41,7 +31,27 @@
     }
     &_paragraph {
         position: relative;
-        margin: 2.5em 0;
-        z-index: 10;
+        margin: 3rem 0;
     }  
+}
+
+@include screen(tablet) {
+    .header {
+        &_decoration {
+            position: absolute;
+            z-index: 4;
+            top: 30vh;
+            right: 3%;
+            width: 45%;
+            height: 85%;
+            background-image: url('../assets/man-min.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &_hello {
+            display: block;
+            margin-bottom: .8rem;
+          
+        }
+    }
 }

@@ -2,13 +2,14 @@
     @include flex(column,nowrap,flex-start,flex-start,center);
     color: white;
     background-color: $colorAzureRadiance;
+    font-size: 2rem;
     &_heading {
         padding: 0;
         margin: 0;
         font-size: 2em;
     }
     &_box {
-        width: 60%;
+        width: 100%;
     }
     &_subHeading {
         font-family: $fontHeadings;
@@ -35,6 +36,11 @@
         }
         &_btn {
             margin-bottom: 3em;
+        }
+        &_box {
+            &:not(:last-child) {
+                padding-right: 100px;
+            }
         }
     }
 }

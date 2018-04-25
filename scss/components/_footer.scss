@@ -6,7 +6,9 @@
     background-position: center;
     background-attachment: fixed;
     color: white;
-    padding-bottom: 4em;
+    font-size: 1.5rem;
+    // padding-bottom: 4em;
+    min-height: 100vh;
     &_box {
         @include flex(column,wrap,center,center,center);
         @include screen(tablet) {
@@ -22,5 +24,11 @@
     &_link {
         text-decoration: none;
         color: inherit;
+    }
+}
+
+@include screen(tablet) {
+    .footer {
+        font-size: 2rem;
     }
 }

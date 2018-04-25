@@ -1,7 +1,7 @@
 .socials {
     @include flex(row,wrap,center,center,center);
     padding: 0 1em;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     &_item {
         list-style: none;
     }
@@ -12,5 +12,11 @@
         margin: 10px;
         padding: 8px;
         display: inline-block;
+    }
+}
+
+@include screen(tablet) {
+    .socials {
+        padding-bottom: 4rem;
     }
 }
